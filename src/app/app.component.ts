@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {environment} from "../environments/environment";
 
 @Component({
   selector: 'app-root',
@@ -13,4 +14,8 @@ export class AppComponent {
   footerStyles = {
     'background-image': 'url(' + this.imageBackgroundParam + ')',
   };
+
+  constructor() {
+    console.log(environment.production); // Logs false for default environment
+  }
 }
