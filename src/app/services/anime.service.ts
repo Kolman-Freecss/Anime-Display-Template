@@ -18,7 +18,8 @@ export class AnimeService {
 
   getAnimes() : Observable<Anime[]>{
     this.messageService.add("AnimeService: fetched animes");
-    return this.clientWsService.getAnimes();//of(this.mockAnimes.getMocksAnime());
+    return of(this.mockAnimes.getMocksAnime());
+    //return this.clientWsService.getAnimes();
   }
 
   getAnime(id: number): Observable<Anime> {
