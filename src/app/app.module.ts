@@ -13,6 +13,8 @@ import { AnimeDetailComponent } from './components/anime/anime-detail/anime-deta
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { MangaDetailComponent } from './components/manga/manga-detail/manga-detail.component';
 import { MangaTableComponent } from './components/manga/manga-table/manga-table.component';
+import {AngularFireModule} from "@angular/fire/compat";
+import {environment} from "../environments/environment";
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { MangaTableComponent } from './components/manga/manga-table/manga-table.
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [MockAnime],
   bootstrap: [AppComponent]

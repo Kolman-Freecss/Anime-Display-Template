@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "anime-display-template": {
+      "hosting": {
+        "Anime-Display-Template": [
+          "anime-display-template"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "anime-display-template"
+  }
+}

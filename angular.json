@@ -94,6 +94,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Anime-Display-Template:build:production",
+            "firebaseProject": "anime-display-template",
+            "firebaseHostingSite": "anime-display-template"
+          }
         }
       }
     }
