@@ -1,0 +1,31 @@
+<h5 class="font-weight-bold">
+  Anime Table!
+</h5>
+<div > <!--*ngIf="listAnime.length < 10"-->
+  <table class="table table-dark table-hover table-striped" >
+    <thead class="thead-light">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th *ngIf="listAnime.length > 1"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let anime of listAnime; let i = index">
+      <a routerLink="/anime-detail/{{anime.id}}">
+        <td>
+          {{anime.id}}
+        </td>
+      </a>
+      <td>{{anime.name}}</td>
+      <td>{{anime.gender}}</td>
+      <td *ngIf="listAnime.length > 1">
+        <button (click)="deleteAnime(i)" type="button" class="btn btn-outline-danger">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-dark btn-lg" (click)="clickAnimeForm()">Add Anime</button>
+  <button type="button" class="btn btn-dark btn-lg" (click)="generatePDF()" id="generatePDF">Generate PDF</button>
+</div>

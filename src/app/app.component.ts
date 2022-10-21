@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Anime-Display-Template';
+
+  imageBackgroundParam="assets/footer_image.png";
+
+  footerStyles = {
+    'background-image': 'url(' + this.imageBackgroundParam + ')',
+  };
 }
