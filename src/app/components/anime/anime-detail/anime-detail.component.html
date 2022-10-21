@@ -1,0 +1,13 @@
+<div *ngIf="anime">
+
+  <h2>{{anime.name | uppercase}} Details</h2>
+  <div><span>Id: </span>{{anime.id}}</div>
+  <div>
+    <label>Name:
+      <input [(ngModel)]="anime.name" placeholder="name"/>
+    </label>
+  </div>
+
+  <button (click)="goBack()">go back</button>
+
+</div>

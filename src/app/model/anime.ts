@@ -2,15 +2,15 @@ import {Gender} from "./gender";
 
 export class Anime{
     id?: number;
-    name: String;
+    name: string;
     gender: Gender;
-    website: String;
+    website: string;
     isFinished: boolean;
 
     constructor(
-        name: String,
+        name: string,
         gender: Gender,
-        website: String,
+        website: string,
         isFinished: boolean,
         id?: number,
     ){
